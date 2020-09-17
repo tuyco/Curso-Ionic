@@ -1,0 +1,27 @@
+<ion-content class="no-scroll">
+  <div class="splash-bg"></div>
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div class="splash-intro">
+      Aluracar
+    </div>
+  </div>
+  <div padding>
+    <form (ngSubmit)="getUser()">
+      <ion-list>
+        <ion-item>
+          <ion-label floating >E-mail</ion-label>
+          <ion-input [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Senha</ion-label>
+          <ion-input [(ngModel)]="senha" type="password"  name="senha"></ion-input>
+        </ion-item>
+      </ion-list>
+      <button type="submit" ion-button block >Login
+
+      </button>
+    </form>
+  </div>
+</ion-content>

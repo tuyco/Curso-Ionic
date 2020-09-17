@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding scroll="false">
+
+  <ion-item>
+    <ion-label>
+      <h2>{{ carro.nome }}</h2>
+      <p>R$ {{ precoTotal }}</p>
+    </ion-label>
+  </ion-item>
+
+  <form (ngSubmit)="submitAgenda()" #formularioAgenda="ngForm">
+    <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Nome: </ion-label>
+        <ion-input [(ngModel)]="agendamento.nome" name="nome" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>E-mail: </ion-label>
+        <ion-input [(ngModel)]="agendamento.emailCliente" name="emailCliente" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Endereço: </ion-label>
+        <ion-input [(ngModel)]="agendamento.endereco" name="endereco" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Data: </ion-label>
+        <ion-datetime [(ngModel)]="agendamento.data" name="data"
+          displayFormat="DD/MM/YYYY HH:mm" cancelText="Cancelar" doneText="Concluir"></ion-datetime>
+      </ion-item>
+    </ion-list>
+
+  </form>
+
+  <ion-fab top right>
+    <button ion-fab mini (click)="formularioAgenda.ngSubmit.emit()">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-split-pane>
+  <ion-menu [content]="content" *ngIf="userLogin">
+    <ion-content>
+      <ion-item id="cabecalho-menu" class="cabecalho-menu">
+        <div>
+          <ion-avatar item-start>
+            <img src="assets/img/avatar-padrao.jpg">
+          </ion-avatar>
+        </div>
+        <h2>{{  userLogin.nome }}</h2>
+        <p>{{  userLogin.email }}</p>
+      </ion-item>
+      <ion-list>
+
+        <button ion-item menuClose *ngFor="let pagina of paginas"
+        (click)="goToPage(pagina.conteudo)">
+          <ion-icon [name]="pagina.icon" item-left></ion-icon>
+          {{pagina.Titulo}}
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-nav main [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+</ion-split-pane>
