@@ -34,9 +34,9 @@
         <ion-input [(ngModel)]="agendamento.endereco" name="endereco" type="text"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label stacked>Data: </ion-label>
-        <ion-datetime [(ngModel)]="agendamento.data" name="data"
+      <ion-item (click)="openDatePicker()">
+        <ion-label  stacked>Data: </ion-label>
+        <ion-datetime disabled="true" [(ngModel)]="agendamento.data" name="data"
           displayFormat="DD/MM/YYYY HH:mm" cancelText="Cancelar" doneText="Concluir"></ion-datetime>
       </ion-item>
     </ion-list>

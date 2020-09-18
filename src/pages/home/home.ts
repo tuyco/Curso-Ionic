@@ -29,7 +29,7 @@ export class HomePage {
       (carros) => {this.carros = carros; loading.dismiss();},
       (err: HttpErrorResponse) => {
         loading.dismiss();
-        console.log(err);
+
         this._alertCtrl.create({
           title: 'Erro com a conexão',
           subTitle: 'Tente novamente mais tarde',

@@ -16,7 +16,7 @@ export class PerfilPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PerfilPage');
+
   }
 
   get userLogin():User {

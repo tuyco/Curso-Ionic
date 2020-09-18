@@ -32,12 +32,10 @@ export class MyApp {
   }
 
   goToPage(component) {
-    console.log(component)
     this.nav.push(component);
   }
 
   get userLogin(): User {
-    console.log(this.userDAO.getUser())
     return this.userDAO.getUser();
   }
 }

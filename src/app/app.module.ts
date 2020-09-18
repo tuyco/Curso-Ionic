@@ -12,6 +12,7 @@ import { AgendamentosServiceProvider } from '../providers/agendamentos-service/a
 import { AgendamentoDaoProvider } from '../providers/agendamento-dao/agendamento-dao';
 import { IonicStorageModule } from '@ionic/storage';
 import { Vibration } from '@ionic-native/vibration'
+import { DatePicker } from '@ionic-native/date-picker'
 
 import 'rxjs/add/operator/finally'
 import 'rxjs/add/operator/do'
@@ -52,7 +53,8 @@ import { HomePage } from '../pages/home/home';
     AgendamentosServiceProvider,
     AgendamentoDaoProvider,
     UserDaoProvider,
-    Vibration
+    Vibration,
+    DatePicker
   ]
 })
 export class AppModule {}
