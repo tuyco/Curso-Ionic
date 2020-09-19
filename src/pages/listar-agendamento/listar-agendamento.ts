@@ -25,6 +25,21 @@ export class ListarAgendamentoPage {
     .subscribe((agendamentos:Agendamento[]) => this.agendamentos = agendamentos);
   }
 
+  ionViewDidEnter() {
+    setTimeout(() => {
+      this.atualizadaAgendamentos();
+    }, 10000);
+  }
+
+  private atualizadaAgendamentos() {
+    this.agendamentos
+      .filter((agendamento: Agendamento) => {agendamento.confirmado})
+      .forEach((agendamento: Agendamento) => {
+        agendamento.visualizado = true;
+        this.agendamentoDAO.salvar(agendamento);
+      })
+  }
+
   reenviarAgendamento(agendamento: Agendamento) {
 
     console.log('Reenvio',agendamento)

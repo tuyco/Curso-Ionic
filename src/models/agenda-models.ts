@@ -6,6 +6,11 @@ export class Agendamento {
     public data?: string,
     public modelo?: string,
     public enviado?: boolean,
-    public confirmado?: boolean
-  ){}
+    public confirmado?: boolean,
+    public visualizado?: boolean
+  ){
+    this.enviado = false;
+    this.confirmado = false;
+    this.visualizado = false;
+  }
 }

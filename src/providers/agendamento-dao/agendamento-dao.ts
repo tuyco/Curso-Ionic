@@ -32,8 +32,11 @@ export class AgendamentoDaoProvider {
     let promise = this.storage.forEach((agendamento: Agendamento) => {
       agendamentos.push(agendamento)
     }).then(()=> agendamentos)
-    console.log('promise',  promise);
-    console.log('observable',  Observable.fromPromise(promise))
+    return Observable.fromPromise(promise);
+  }
+
+  getAgendamentoById(agendamentoId) {
+    let promise =  this.storage.get(agendamentoId);
     return Observable.fromPromise(promise);
   }
 }
