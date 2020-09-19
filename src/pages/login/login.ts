@@ -10,8 +10,8 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
 
-  email: string = 'joao@alura.com.br';
-  senha: string = 'alura123';
+  email: string = 'sauloddiniz@gmail.comm';
+  senha: string = 'merda22';
   alert: Alert;
 
   constructor(public navCtrl: NavController,
