@@ -11,8 +11,9 @@ import { CarrosServiceProvider } from '../providers/carros-service/carros-servic
 import { AgendamentosServiceProvider } from '../providers/agendamentos-service/agendamentos-service';
 import { AgendamentoDaoProvider } from '../providers/agendamento-dao/agendamento-dao';
 import { IonicStorageModule } from '@ionic/storage';
-import { Vibration } from '@ionic-native/vibration'
-import { DatePicker } from '@ionic-native/date-picker'
+import { Vibration } from '@ionic-native/vibration';
+import { DatePicker } from '@ionic-native/date-picker';
+import { Camera } from '@ionic-native/camera';
 
 import 'rxjs/add/operator/finally'
 import 'rxjs/add/operator/do'
@@ -54,7 +55,8 @@ import { HomePage } from '../pages/home/home';
     AgendamentoDaoProvider,
     UserDaoProvider,
     Vibration,
-    DatePicker
+    DatePicker,
+    Camera
   ]
 })
 export class AppModule {}

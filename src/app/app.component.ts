@@ -1,6 +1,6 @@
 import { LoginPage } from './../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav } from 'ionic-angular';
+import { Platform, Nav, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -37,6 +37,10 @@ export class MyApp {
 
   get userLogin(): User {
     return this.userDAO.getUser();
+  }
+
+  get avatar() {
+    return this.userDAO.obtemAvatar();
   }
 }
 
